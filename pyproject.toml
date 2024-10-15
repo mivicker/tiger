@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "tiger"
+version = "0.1.0"
+description = "A cleaning and integration package for census tiger line files"
+authors = ["mikevatd3 <mike@datadrivendetroit.org>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <=3.13"
+polars = "^1.4.0"
+psycopg2-binary = "^2.9.9"
+SQLAlchemy = "^2.0.31"
+tomli = "^2.0.1"
+geopandas = "^1.0.1"
+returns = "^0.23.0"
+geoalchemy2 = "^0.15.2"
+pandas = "^2.2.2"
+pyarrow = "^17.0.0"
+tabulate = "^0.9.0"
+loader = {path = "/home/michael/projects/new/system/tools/loader", develop = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

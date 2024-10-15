@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "[%(levelname)s|%(filename)s|%(funcName)s|L%(lineno)d] @ %(asctime)s: %(message)s"
+        }
+    },
+    "handlers": {
+        "stderr": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "filename": "logs/tiger.log",
+            "maxBytes": 5000000,
+            "backupCount": 5
+        }
+    },
+    "loggers": {
+        "root": {"level": "DEBUG", "handlers": ["stderr", "file"]}
+    }
+}
